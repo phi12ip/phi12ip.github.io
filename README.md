@@ -6,7 +6,7 @@
 4. Remove tables that do not add functionality (ex. tblCompany_Course)
 5. Pull out simplified Database queries as an API that can be used by a mobile app (Like going to the Index instead of the Table of Contents)
 
-## Next 6 Months/Reach Goals
+## Reach Goals / July - December
 
 - Replace Session(Server-side) based authentication with Token (Client-side) based authentication
 - Rebuild Admin interface to database as a separate application
