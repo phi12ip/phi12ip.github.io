@@ -9,7 +9,7 @@ export default class About extends Component {
             <div>
                 <h2>About</h2>
                 <p>
-                    
+                    Test
                 </p>
             </div>
         );

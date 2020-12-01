@@ -14,10 +14,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf ../docs && mv build ../docs",
+    "build": "react-scripts build",
+    "build:githubPages": "yarn build && rm -rf ../docs && mv build ../docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && rm -rf ../docs && mv build ../docs && cp 404.html ../docs/404.html && cd ../ && git add . && git commit -m 'yarn deploy $(date)' && git push"
+    "deploy:githubPages": "yarn build:githubPages && cp 404.html ../docs/404.html && cd ../ && git add . && git commit -m 'yarn deploy github pages $(date)' && git push"
   },
   "eslintConfig": {
     "extends": [
