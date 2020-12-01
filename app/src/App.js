@@ -1,5 +1,4 @@
-import './App.css';
-
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,37 +6,41 @@ import {
   Link
 } from 'react-router-dom';
 
-export default function App() {
-  return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
+import './App.css';
+import About from './components/AboutComponent';
+import Home from './components/HomeComponent';
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
+export default class App extends Component {
+  componentWillMount() {
+    document.title = 'Phi12ip'
+  }
+  render() {
+    return (
+      <Router>
+        <div>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
 
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+          <Switch>
 
-function Home() {
-  return <h2>Home</h2>;
-}
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-function About() {
-  return <h2>About</h2>;
+            <Route exact path="/about">
+              <About />
+            </Route>
+
+          </Switch>
+        </div>
+      </Router>
+    );
+
+  }
 }
